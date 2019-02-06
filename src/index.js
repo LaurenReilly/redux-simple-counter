@@ -23,7 +23,10 @@ addFiveButton.addEventListener('click', e => dispatch({ type: "ADD_FIVE" }));
 const subFiveButton = document.getElementById('subFive');
 subFiveButton.addEventListener('click', e => dispatch({ type: "SUB_FIVE" }));
 
-//Dispatch the "COLOR" action every time the user selects a color
+//Dispatch the "COLOR" action when user selects a color
 const selectMenu = document.getElementById("color");
-let changeColor = color => console.log(color);
-selectMenu.addEventListener('change', changeColor(selectMenu.value));
+selectMenu.addEventListener('change', e => dispatch({type: "COLOR", color: selectMenu.value}));
+
+//Dispatch the "NUM" action when user enters custom number
+const numInput = document.getElementById("numInput");
+numInput.addEventListener('change', e => dispatch({type: "NUM", value: numInput.value}))
