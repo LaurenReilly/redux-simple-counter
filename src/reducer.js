@@ -1,5 +1,6 @@
 const initialState = {
-    value: 0
+    value: 0,
+    color: "grey"
 }
 
 const reducer = (state = initialState, action) => {
@@ -8,6 +9,23 @@ const reducer = (state = initialState, action) => {
         return {
             value: state.value + 1
         }
+    } else if (type === "DECREMENT") {
+        return {
+            value: state.value - 1
+        }
+    } else if (type === "ADD_FIVE") {
+        return {
+            value: state.value + 5
+        }
+    } else if (type === "SUB_FIVE") {
+        return {
+            value: state.value - 5
+        }
+    } else if (type === "COLOR") {
+        return {
+            value: state.color
+        }
     }
-    return state
+    
+    return state;
 }
