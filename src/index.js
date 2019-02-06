@@ -30,3 +30,7 @@ selectMenu.addEventListener('change', e => dispatch({type: "COLOR", color: selec
 //Dispatch the "NUM" action when user enters custom number
 const numInput = document.getElementById("numInput");
 numInput.addEventListener('change', e => dispatch({type: "NUM", value: numInput.value}))
+
+//add new counter with ADD_COUNTER
+// const addCounter = document.getElementById("addCounter");
+// addCounter.addEventListener('click', e => dispatch({type: "ADD_COUNTER"}))
